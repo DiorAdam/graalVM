@@ -13,8 +13,8 @@ public class JSON_to_KML {
         this.path = new Vector<>();
     }
 
-    /* this function takes as input the directory of the json file
-       with the coordinates and fills up the vector this.path      */
+    /* this function uses the javascript function <JSON.parse()>  to parse
+        the input file */
     public void parse_json(String json_dir){
         File json_file = new File(json_dir);
         try{
@@ -63,7 +63,7 @@ public class JSON_to_KML {
 
                 StringBuilder coords = new StringBuilder();
                 for (double[] coord : this.path){
-                    coords.append("\t\t  ").append(coord[0]).append(", ").append(coord[1]).append("\n");
+                    coords.append("          ").append(coord[0]).append(", ").append(coord[1]).append("\n");
                 }
                 fw.write(opening + coords.toString() + closing);
                 fw.close();
@@ -95,3 +95,5 @@ public class JSON_to_KML {
         jk.build_kml(kml_dir, args[0]);
     }
 }
+
+
