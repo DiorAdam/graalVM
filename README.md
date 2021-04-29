@@ -3,5 +3,5 @@
 ## Run:
  - download and install graalvm [here](https://www.graalvm.org/) 
  - clone this repository: ```git clone https://github.com/DiorAdam/graalVM.git```
- - compile the java code : ```javac JSON_to_KML```
+ - compile the java code : ```javac JSON_to_KML.java```
  - run with an argument (name of the json file in ../json_traj) : ```java JSON_to_KML traj4```
